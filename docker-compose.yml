@@ -14,6 +14,8 @@ services:
     volumes:
       - mongodb_api:/data/db
   frontend:
+    environment:
+      - WDS_SOCKET_PORT=0
     build:
       context: frontend
       dockerfile: Dockerfile.prod
